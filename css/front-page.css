@@ -1,0 +1,44 @@
+/* 6.0 Front Page Sections ----------------------------------*/
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(min(280px,100%),1fr));
+}
+
+#cta {
+  background: #fff;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+  text-align: center;
+}
+
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100svh - 110px); /* Full viewport height minus header */
+  background: none;
+  gap: 3rem;
+  padding: 2rem 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+

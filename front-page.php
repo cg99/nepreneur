@@ -2,7 +2,7 @@
 
 <section id="hero" class="hero-split">
   <div class="hero-content">
-    <h1>Igniting Nepal’s <br>Entrepreneurial Spirit</h1>
+    <h1>Igniting Nepal's <br>Entrepreneurial Spirit</h1>
     <p>Connect with founders, mentors & investors driving innovation across Nepal.</p>
     <a href="#cta" class="btn">Join the Community</a>
   </div>
@@ -45,8 +45,8 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email <a href="mailto:hello@neprenuer.com">hello@neprenuer.com</a> • 
-     <a href="https://twitter.com/neprenuer" target="_blank" rel="noopener">Twitter</a></p>
+  <p>Email <a href="mailto:hello@nepreneur.com">hello@nepreneur.com</a> • 
+     <a href="https://twitter.com/nepreneur" target="_blank" rel="noopener">Twitter</a></p>
 </section>
 
 <?php get_footer(); ?>

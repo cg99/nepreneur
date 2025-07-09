@@ -1,6 +1,6 @@
 /*
 Theme Name: Nepreneur
-Version: 1.1
+Version: 1.2
 */
 
 /*--------------------------------------------------------------
@@ -190,6 +190,13 @@ section {
   height: auto;
   border-radius: var(--np-radius);
   box-shadow: var(--np-shadow);
+}
+
+/* Blog List -------------------------------------------------*/
+.blog-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
 }
 
 /* 6.0 Front Page Sections ----------------------------------*/

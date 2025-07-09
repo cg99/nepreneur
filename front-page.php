@@ -32,7 +32,7 @@
 
     <article class="card">
       <h3>Founder Resources</h3>
-      <p>Playbooks, legal templates, and a lively Slack community—totally free.</p>
+      <p>Playbooks, legal templates, and a lively Viber community—totally free.</p>
     </article>
   </div>
 </section>

@@ -22,7 +22,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#cta">Get Started</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">Blog</a></li>
+            <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
         </ul>
     </nav>
 </header>

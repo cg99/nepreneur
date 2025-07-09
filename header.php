@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+
+<header class="site-header">
+   
+    <div class="logo">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="<?php bloginfo('name'); ?> Logo" style="height:100px;">
+        </a>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cta">Get Started</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">Blog</a></li>
+        </ul>
+    </nav>
+</header>

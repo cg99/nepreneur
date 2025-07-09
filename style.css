@@ -179,6 +179,19 @@ section {
   box-shadow: 0 12px 28px rgba(0,0,0,.06);
 }
 
+/* Single Post ----------------------------------------------*/
+#single-post .featured-image {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+#single-post .featured-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+}
+
 /* 6.0 Front Page Sections ----------------------------------*/
 .services-grid {
   display: grid;

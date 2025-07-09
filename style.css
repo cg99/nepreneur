@@ -3,11 +3,25 @@ Theme Name: Nepreneur
 Version: 1.1
 */
 
+/*--------------------------------------------------------------
+TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Resets & Variables
+2.0 Global Elements
+3.0 Layout
+4.0 Header Navigation
+5.0 Shared Components
+6.0 Front Page Sections
+7.0 Footer
+8.0 Responsive
+--------------------------------------------------------------*/
+
+/* 1.0 Resets & Variables -------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 :root {
-  --np-primary:#0EB1E3;   /* matches the mid-sky blue in the hero */
-  --np-primary-light: #90E8FD;   /* matches the pale horizon tint */
+  --np-primary: #0EB1E3;       /* matches the mid-sky blue in the hero */
+  --np-primary-light: #90E8FD; /* matches the pale horizon tint */
   --np-dark: #0f172a;
   --np-gray: #475569;
   --np-bg: #f8fafc;
@@ -17,105 +31,62 @@ Version: 1.1
 
 *,
 *::before,
-*::after { box-sizing:border-box; }
+*::after { box-sizing: border-box; }
 
-html { scroll-behavior:smooth; }
+html { scroll-behavior: smooth; }
 
 body {
-  margin:0;
-  font-family:Inter,system-ui,sans-serif;
-  color:var(--np-dark);
-  background:var(--np-bg);
-  line-height:1.7;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--np-dark);
+  background: var(--np-bg);
+  line-height: 1.7;
   max-width: 100%;
   max-height: 100%;
 }
 
-/* ───────── NAVBAR ───────── */
-.navbar ul { display:flex; gap:2.25rem; list-style:none; margin:0; padding:0; }
+/* 2.0 Global Elements ---------------------------------------*/
+h1,h2,h3 {
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: 1.25rem; color: var(--np-primary); }
+
+p { max-width: 60ch; margin-bottom: 1.25rem; }
+
+ul.clean { list-style: none; margin: 0; padding: 0; }
+
+a { text-decoration: none; }
+
+/* 3.0 Layout -------------------------------------------------*/
+section {
+  padding: 7rem 1.5rem;
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+/* 4.0 Header Navigation -------------------------------------*/
+.navbar ul {
+  display: flex;
+  gap: 2.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .navbar a {
-  font-weight:500;
-  color:var(--np-gray);
-  transition:color .2s;
+  font-weight: 500;
+  color: var(--np-gray);
+  transition: color .2s;
 }
 
 .navbar a:hover,
-.navbar a.active { color:var(--np-primary); }
+.navbar a.active { color: var(--np-primary); }
 
-/* ───────── SECTIONS ───────── */
-section {
-  padding:7rem 1.5rem;
-  max-width: 80%;
-  margin-inline:auto;
-}
-
-h1,h2,h3 { font-weight:900; line-height:1.2; margin-bottom:1.1rem; }
-
-h1 { font-size:clamp(2.5rem, 5vw, 3.75rem); }
-h2 { font-size:clamp(1.75rem, 4vw, 2.5rem); }
-h3 { font-size:1.25rem; color:var(--np-primary); }
-
-p { max-width:60ch; margin-bottom:1.25rem; }
-
-ul.clean { list-style:none; margin:0; padding:0; }
-
-a{
-  text-decoration:none;
-}  
-
-
-/* ── BUTTON ── */
-.btn {
-  display:inline-block;
-  background:#fff;
-  color:var(--np-primary);
-  padding:.9rem 2.2rem;
-  border-radius:var(--np-radius);
-  font-weight:700;
-  box-shadow:var(--np-shadow);
-  transition:transform .2s;
-}
-
-.btn:hover { transform:translateY(-3px); }
-
-/* ── SERVICES GRID ── */
-.services-grid {
-  display:grid;
-  gap:2rem;
-  grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));
-}
-
-.card {
-  background:#fff;
-  border-radius:var(--np-radius);
-  padding:2rem;
-  box-shadow:var(--np-shadow);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 12px 28px rgba(0,0,0,.06);
-}
-
-/* ── CTA ── */
-#cta {
-  background:#fff;
-  border-radius:var(--np-radius);
-  box-shadow:var(--np-shadow);
-  text-align:center;
-}
-
-/* ── FOOTER ── */
-footer {
-  text-align:center;
-  padding:3rem 1rem 4rem;
-  color:var(--np-gray);
-  font-size:.875rem;
-}
-
-/* Elegant header styles */
 .site-header {
   display: flex;
   align-items: center;           /* Vertically center logo and nav */
@@ -181,7 +152,46 @@ footer {
   text-decoration: none;
 }
 
+/* 5.0 Shared Components -------------------------------------*/
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--np-primary);
+  padding: .9rem 2.2rem;
+  border-radius: var(--np-radius);
+  font-weight: 700;
+  box-shadow: var(--np-shadow);
+  transition: transform .2s;
+}
 
+.btn:hover { transform: translateY(-3px); }
+
+.card {
+  background: #fff;
+  border-radius: var(--np-radius);
+  padding: 2rem;
+  box-shadow: var(--np-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+}
+
+/* 6.0 Front Page Sections ----------------------------------*/
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(min(280px,100%),1fr));
+}
+
+#cta {
+  background: #fff;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+  text-align: center;
+}
 
 .hero-split {
   display: flex;
@@ -213,15 +223,23 @@ footer {
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
 }
 
-/* Responsive for mobile */
+/* 7.0 Footer ------------------------------------------------*/
+footer {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  color: var(--np-gray);
+  font-size: .875rem;
+}
+
+/* 8.0 Responsive -------------------------------------------*/
 @media (max-width: 900px) {
   .hero-split {
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 2rem;
   }
-  .hero-content, .hero-image {
+  .hero-content,
+  .hero-image {
     max-width: 100%;
     text-align: center;
-  }
-}
+  }}

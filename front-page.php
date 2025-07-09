@@ -45,8 +45,32 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email <a href="mailto:hello@nepreneur.com">hello@nepreneur.com</a> • 
+  <p>Email <a href="mailto:hello@nepreneur.com">hello@nepreneur.com</a> •
      <a href="https://twitter.com/nepreneur" target="_blank" rel="noopener">Twitter</a></p>
 </section>
 
+<section id="recent-posts">
+  <h2>Recent Posts</h2>
+  <div class="blog-list">
+    <?php
+      $recent_posts = new WP_Query([
+        'posts_per_page' => 3
+      ]);
+      if ( $recent_posts->have_posts() ) :
+        while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
+    ?>
+      <article class="card">
+        <?php if ( has_post_thumbnail() ) : ?>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('medium'); ?>
+          </a>
+        <?php endif; ?>
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <small><?php the_time('F j, Y'); ?></small>
+        <p><?php the_excerpt(); ?></p>
+        <a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+      </article>
+    <?php endwhile; endif; wp_reset_postdata(); ?>
+  </div>
+</section>
 <?php get_footer(); ?>

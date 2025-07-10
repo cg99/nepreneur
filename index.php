@@ -10,6 +10,9 @@
         <a href="<?php the_permalink(); ?>" class="btn">Read More</a>
       </article>
     <?php endwhile; ?>
+    <nav class="pagination">
+      <?php the_posts_pagination(); ?>
+    </nav>
   <?php else : ?>
     <p>No posts found.</p>
   <?php endif; ?>

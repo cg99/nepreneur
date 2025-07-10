@@ -199,6 +199,30 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
 }
 
+/* Pagination ----------------------------------------------*/
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  margin: 0 .25rem;
+  padding: .5rem 1rem;
+  border-radius: var(--np-radius);
+  background: #fff;
+  color: var(--np-primary);
+  box-shadow: var(--np-shadow);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--np-primary);
+  color: #fff;
+}
+.pagination a:hover {
+  background: var(--np-primary-light);
+}
+
 /* 6.0 Front Page Sections ----------------------------------*/
 .services-grid {
   display: grid;

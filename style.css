@@ -199,6 +199,30 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
 }
 
+/* Pagination ----------------------------------------------*/
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  margin: 0 .25rem;
+  padding: .5rem 1rem;
+  border-radius: var(--np-radius);
+  background: #fff;
+  color: var(--np-primary);
+  box-shadow: var(--np-shadow);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--np-primary);
+  color: #fff;
+}
+.pagination a:hover {
+  background: var(--np-primary-light);
+}
+
 /* 6.0 Front Page Sections ----------------------------------*/
 .services-grid {
   display: grid;
@@ -212,6 +236,16 @@ section {
   box-shadow: var(--np-shadow);
   text-align: center;
 }
+#get-started {
+  background: #fff;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+  text-align: center;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  max-width: 800px;
+}
+
 
 .hero-split {
   display: flex;
@@ -292,4 +326,11 @@ footer {
 #not-found button:hover,
 .not-found button:hover {
   transform: translateY(-3px);
+}
+
+/* 10.0 About Page -------------------------------------------*/
+.about-page {
+  max-width: 800px;
+  margin-inline: auto;
+  line-height: 1.7;
 }

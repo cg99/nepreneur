@@ -69,3 +69,10 @@ add_filter( 'excerpt_length', function ( $length ) {
     }
     return $length;
 }, 999 );
+
+// Include pages in search results alongside blog posts
+add_filter( 'pre_get_posts', function ( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+        $query->set( 'post_type', [ 'post', 'page' ] );
+    }
+} );

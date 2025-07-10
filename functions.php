@@ -61,3 +61,11 @@ function nep_create_default_pages() {
     }
 }
 add_action( 'after_switch_theme', 'nep_create_default_pages' );
+
+// Shorten excerpt length for blog listings and archives
+add_filter( 'excerpt_length', function ( $length ) {
+    if ( is_home() || is_archive() ) {
+        return 20; // limit to 20 words
+    }
+    return $length;
+}, 999 );

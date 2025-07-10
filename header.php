@@ -10,19 +10,24 @@
 <?php wp_body_open(); ?>
 
 <header class="site-header">
-   
+
     <div class="logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="<?php bloginfo('name'); ?> Logo" style="height:100px;">
         </a>
     </div>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#cta">Get Started</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
-        </ul>
-    </nav>
+
+    <div class="nav-search">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#cta">Get Started</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
+            </ul>
+        </nav>
+
+        <?php get_search_form(); ?>
+    </div>
 </header>

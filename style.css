@@ -152,6 +152,39 @@ section {
   text-decoration: none;
 }
 
+/* container for nav and search */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="search"] {
+  padding: .45rem 1rem;
+  border: 1px solid var(--np-gray);
+  border-radius: 2rem 0 0 2rem;
+  font-size: .95rem;
+}
+
+.search-form .search-submit {
+  padding: .45rem 1rem;
+  border: none;
+  background: var(--np-primary);
+  color: #fff;
+  border-radius: 0 2rem 2rem 0;
+  cursor: pointer;
+}
+
+.search-form .search-submit:hover {
+  background: var(--np-primary-light);
+  color: var(--np-dark);
+}
+
 /* 5.0 Shared Components -------------------------------------*/
 .btn {
   display: inline-block;

@@ -303,3 +303,10 @@ footer {
 .not-found button:hover {
   transform: translateY(-3px);
 }
+
+/* 10.0 About Page -------------------------------------------*/
+.about-page {
+  max-width: 800px;
+  margin-inline: auto;
+  line-height: 1.7;
+}

@@ -212,6 +212,16 @@ section {
   box-shadow: var(--np-shadow);
   text-align: center;
 }
+#get-started {
+  background: #fff;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+  text-align: center;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  max-width: 800px;
+}
+
 
 .hero-split {
   display: flex;

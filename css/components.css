@@ -1,0 +1,70 @@
+/* Shared Components */
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--np-primary);
+  padding: .9rem 2.2rem;
+  border-radius: var(--np-radius);
+  font-weight: 700;
+  box-shadow: var(--np-shadow);
+  transition: transform .2s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.card {
+  background: #fff;
+  border-radius: var(--np-radius);
+  padding: 2rem;
+  box-shadow: var(--np-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+}
+
+/* Single Post */
+#single-post .featured-image {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+#single-post .featured-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+}
+
+/* Blog List */
+.blog-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  margin: 0 .25rem;
+  padding: .5rem 1rem;
+  border-radius: var(--np-radius);
+  background: #fff;
+  color: var(--np-primary);
+  box-shadow: var(--np-shadow);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--np-primary);
+  color: #fff;
+}
+.pagination a:hover {
+  background: var(--np-primary-light);
+}

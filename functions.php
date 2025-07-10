@@ -17,3 +17,47 @@ add_action( 'after_setup_theme', function () {
     add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ] );
     add_theme_support( 'post-thumbnails' );
 } );
+
+/**
+ * Create default pages with their templates on theme activation.
+ */
+function nep_create_default_pages() {
+    $pages = [
+        [
+            'slug'    => 'about',
+            'title'   => 'About',
+            'template' => '', // will use page-about.php automatically by slug
+        ],
+        [
+            'slug'    => 'contact',
+            'title'   => 'Contact',
+            'template' => 'page-contact.php',
+        ],
+        [
+            'slug'    => 'services',
+            'title'   => 'Services',
+            'template' => 'page-services.php',
+        ],
+        [
+            'slug'    => 'get-started',
+            'title'   => 'Get Started',
+            'template' => 'page-get-started.php',
+        ],
+    ];
+
+    foreach ( $pages as $page ) {
+        if ( ! get_page_by_path( $page['slug'] ) ) {
+            $page_id = wp_insert_post( [
+                'post_title'  => $page['title'],
+                'post_name'   => $page['slug'],
+                'post_status' => 'publish',
+                'post_type'   => 'page',
+            ] );
+
+            if ( ! is_wp_error( $page_id ) && $page_id && ! empty( $page['template'] ) ) {
+                update_post_meta( $page_id, '_wp_page_template', $page['template'] );
+            }
+        }
+    }
+}
+add_action( 'after_switch_theme', 'nep_create_default_pages' );

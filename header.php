@@ -20,10 +20,10 @@
     <div class="nav-search">
         <nav class="navbar">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#cta">Get Started</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="<?php echo esc_url( site_url( '/services' ) ); ?>">Services</a></li>
+                <li><a href="<?php echo esc_url( site_url( '/about' ) ); ?>">About</a></li>
+                <li><a href="<?php echo esc_url( site_url('/get-started') ); ?>">Get Started</a></li>
+                <li><a href="<?php echo esc_url( site_url('/contact') ); ?>">Contact</a></li>
                 <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
             </ul>
         </nav>

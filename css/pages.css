@@ -1,0 +1,35 @@
+/* Not Found Page */
+#not-found,
+.not-found {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+#not-found .btn,
+.not-found .btn,
+#not-found button,
+.not-found button {
+  display: inline-block;
+  background: #fff;
+  color: var(--np-primary);
+  padding: .9rem 2.2rem;
+  border-radius: var(--np-radius);
+  font-weight: 700;
+  box-shadow: var(--np-shadow);
+  transition: transform .2s;
+  text-decoration: none;
+}
+
+#not-found .btn:hover,
+.not-found .btn:hover,
+#not-found button:hover,
+.not-found button:hover {
+  transform: translateY(-3px);
+}
+
+/* About Page */
+.about-page {
+  max-width: 800px;
+  margin-inline: auto;
+  line-height: 1.7;
+}

@@ -1,0 +1,13 @@
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-split {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+    text-align: center;
+  }
+}

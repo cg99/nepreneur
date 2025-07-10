@@ -19,6 +19,9 @@
       <p>No posts found.</p>
     <?php endif; ?>
   </div>
+  <nav class="pagination">
+    <?php the_posts_pagination(); ?>
+  </nav>
 </section>
 
 <?php get_footer(); ?>

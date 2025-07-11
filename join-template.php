@@ -53,30 +53,29 @@ if ( is_user_logged_in() ) {
         <h1>Create your NEPRENEUR account</h1>
 
         <form method="post" class="signup-form">
-                <p>
-                        <label>Username<br>
-                                <input type="text" name="username" required>
-                        </label>
-                </p>
-                <p>
-                        <label>Email Address<br>
-                                <input type="email" name="email" required>
-                        </label>
-                </p>
-                <p>
-                        <label>Password<br>
-                                <input type="password" name="password" required minlength="6">
-                        </label>
-                </p>
-                <p>
-                        <strong>I am an:</strong><br>
-                        <label><input type="radio" name="acct_type" value="investor" required> Investor</label><br>
-                        <label><input type="radio" name="acct_type" value="entrepreneur" required> Entrepreneur</label>
-                </p>
+                <div class="field">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" required>
+                </div>
+                <div class="field">
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" required>
+                </div>
+                <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="password" required minlength="6">
+                </div>
+                <div class="field">
+                        <span class="field-label">I am an:</span>
+                        <div class="radio-options">
+                                <label><input type="radio" name="acct_type" value="investor" required> Investor</label>
+                                <label><input type="radio" name="acct_type" value="entrepreneur" required> Entrepreneur</label>
+                        </div>
+                </div>
 
                 <?php wp_nonce_field( 'nep_reg', 'nep_reg_nonce' ); ?>
 
-                <p><button type="submit" class="btn">Sign Up</button></p>
+                <button type="submit" class="btn">Sign Up</button>
         </form>
         <?php
 }

@@ -41,6 +41,11 @@
   margin-inline: auto;
 }
 
+.signup-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .signup-form {
   background: #fff;
   padding: 2rem;
@@ -48,7 +53,7 @@
   box-shadow: var(--np-shadow);
 }
 
-.signup-form p {
+.signup-form .field {
   margin-bottom: 1rem;
 }
 
@@ -56,17 +61,44 @@
   font-weight: 500;
 }
 
+.signup-form .field label {
+  display: block;
+  margin-bottom: .35rem;
+}
+
 .signup-form input[type="text"],
 .signup-form input[type="email"],
 .signup-form input[type="password"] {
   width: 100%;
-  padding: .65rem 1rem;
+  padding: .75rem 1rem;
   border: 1px solid var(--np-gray);
   border-radius: var(--np-radius);
 }
 
-.signup-form button.btn {
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--np-primary);
+  box-shadow: 0 0 0 3px var(--np-primary-light);
+}
+
+.signup-form .radio-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: .5rem;
+}
+
+.signup-form .field-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: .35rem;
+}
+
+.signup-form button.btn {
+  margin-top: 1rem;
+  width: 100%;
 }
 
 .nep-errors p {

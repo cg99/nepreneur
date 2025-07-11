@@ -33,3 +33,43 @@
   margin-inline: auto;
   line-height: 1.7;
 }
+
+/* Signup Page */
+.signup-page {
+  padding: 4rem 1rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.signup-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--np-radius);
+  box-shadow: var(--np-shadow);
+}
+
+.signup-form p {
+  margin-bottom: 1rem;
+}
+
+.signup-form label {
+  font-weight: 500;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: .65rem 1rem;
+  border: 1px solid var(--np-gray);
+  border-radius: var(--np-radius);
+}
+
+.signup-form button.btn {
+  margin-top: .5rem;
+}
+
+.nep-errors p {
+  color: #c00;
+  margin: 0 0 1rem;
+}

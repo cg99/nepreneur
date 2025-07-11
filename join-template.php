@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-<main id="nep-signup" style="max-width:500px;margin:0 auto;padding:3rem 1rem;">
+<main id="nep-signup" class="signup-page">
 
 <?php
 if ( is_user_logged_in() ) {
@@ -48,19 +48,19 @@ if ( is_user_logged_in() ) {
 		}
 
 		if ( $errors->get_error_messages() ) {
-			echo '<div class="nep-errors">';
-			foreach ( $errors->get_error_messages() as $e ) {
-				echo '<p style="color:#c00;">'. esc_html( $e ) .'</p>';
-			}
-			echo '</div>';
-		}
-	}
+                        echo '<div class="nep-errors">';
+                        foreach ( $errors->get_error_messages() as $e ) {
+                                echo '<p>'. esc_html( $e ) .'</p>';
+                        }
+                        echo '</div>';
+                }
+        }
 
 	/* ─── Show the form ──────────────────────────── */
 	?>
 	<h1>Create your NEPRENEUR account</h1>
 
-	<form method="post">
+        <form method="post" class="signup-form">
 		<p>
 			<label>Username<br>
 				<input type="text" name="username" required>
@@ -84,7 +84,7 @@ if ( is_user_logged_in() ) {
 
 		<?php wp_nonce_field( 'nep_reg', 'nep_reg_nonce' ); ?>
 
-		<p><button type="submit">Sign Up</button></p>
+                <p><button type="submit" class="btn">Sign Up</button></p>
 	</form>
 	<?php
 }

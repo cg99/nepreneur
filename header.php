@@ -23,6 +23,7 @@
                 <li><a href="<?php echo esc_url( site_url( '/services' ) ); ?>">Services</a></li>
                 <li><a href="<?php echo esc_url( site_url( '/about' ) ); ?>">About</a></li>
                 <li><a href="<?php echo esc_url( site_url('/get-started') ); ?>">Get Started</a></li>
+                <li><a href="<?php echo esc_url( site_url( '/forums' ) ); ?>">Community</a></li>
                 <li><a href="<?php echo esc_url( site_url('/contact') ); ?>">Contact</a></li>
                 <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
             </ul>

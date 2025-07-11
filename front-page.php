@@ -40,7 +40,7 @@
 <section id="cta">
   <h2>Ready to level-up?</h2>
   <p>Become a member and unlock exclusive workshops, events & perks.</p>
-  <a href="<?php echo esc_url( site_url('/signup') ); ?>" class="btn">Sign Up Now</a>
+  <a href="<?php echo esc_url( site_url('/join') ); ?>" class="btn">Sign Up Now</a>
 </section>
 
 <section id="contact">

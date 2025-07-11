@@ -76,3 +76,55 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'post_type', [ 'post', 'page' ] );
     }
 } );
+
+
+/**
+ * Ensure custom community roles exist; create only if missing.
+ */
+function nepreneur_add_roles() {
+
+	// ── Investor ───────────────────────────────────────────────
+	if ( ! get_role( 'investor' ) ) {
+		add_role(
+			'investor',
+			'Investor',
+			[
+				'read'            => true,
+				'bbp_participant' => true,   // can post & reply in bbPress
+			]
+		);
+	}
+
+	// ── Entrepreneur ───────────────────────────────────────────
+	if ( ! get_role( 'entrepreneur' ) ) {
+		add_role(
+			'entrepreneur',
+			'Entrepreneur',
+			[
+				'read'            => true,
+				'upload_files'    => true,   // allow pitch-deck uploads
+				'bbp_participant' => true,
+			]
+		);
+	}
+}
+register_activation_hook( 'after_switch_theme', 'nepreneur_add_roles' );
+
+/*----------------------------------------------------
+ *  Rewrite slug  /join  →  our signup template
+ *---------------------------------------------------*/
+function nep_add_join_rewrite() {
+	add_rewrite_rule( '^join/?$', 'index.php?nep_join=1', 'top' );
+	add_rewrite_tag( '%nep_join%', '1' );
+}
+add_action( 'init', 'nep_add_join_rewrite' );
+
+/*  Load signup template when query var present  */
+function nep_load_join_template( $template ) {
+	if ( get_query_var( 'nep_join' ) ) {
+		return __DIR__ . '/join-template.php'; // file we make in step 3
+	}
+	return $template;
+}
+add_filter( 'template_include', 'nep_load_join_template' );
+

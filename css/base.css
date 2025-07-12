@@ -8,6 +8,7 @@
   --np-bg: #f8fafc;
   --np-radius: 1rem;
   --np-shadow: 0 8px 24px rgba(0,0,0,.05);
+  --np-space-section: clamp(4rem, 8vh, 6rem);
 }
 
 *,
@@ -45,7 +46,7 @@ a { text-decoration: none; }
 
 /* 3.0 Layout -------------------------------------------------*/
 section {
-  padding: 7rem 1.5rem;
+  padding: var(--np-space-section) 1.5rem;
   max-width: 1200px;
   margin-inline: auto;
 }

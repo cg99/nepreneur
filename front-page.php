@@ -102,7 +102,11 @@
     <?php endwhile; endif; wp_reset_postdata(); ?>
   </div>
 </section>
+<<<<<<< HEAD
 
 <section></section>
 
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> e54bec8b155b65472c1fb7de6bb2a6e8c29aa0d4

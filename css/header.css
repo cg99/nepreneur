@@ -80,3 +80,49 @@
   color: var(--np-primary);
   text-decoration: none;
 }
+
+/* --- Search Form Styling --- */
+.nav-search {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: var(--np-shadow);
+  padding: 0.2rem 0.8rem;
+  gap: 0.5rem;
+}
+
+.search-form .search-field {
+  border: none;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  outline: none;
+  color: var(--np-dark);
+  min-width: 160px;
+}
+
+.search-form .search-submit {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  background: var(--np-primary);
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.search-form .search-submit:hover {
+  background: var(--np-primary-light);
+  color: var(--np-primary);
+}

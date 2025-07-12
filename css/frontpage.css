@@ -28,7 +28,7 @@
   min-height: calc(100svh - 110px); /* Full viewport height minus header */
   background: none;
   gap: 3rem;
-  padding: 2rem 2rem;
+  padding: calc(var(--np-space-section) / 2) 2rem;
 }
 
 .hero-content {

@@ -9,6 +9,11 @@ add_action( 'wp_enqueue_scripts', function () {
 
     // smooth-scroll for anchor links
     wp_enqueue_script( 'nep-scroll', get_theme_file_uri( '/js/smooth-scroll.js' ), [], '1.0', true );
+
+    // allow threaded comment replies on singular posts
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 } );
 
 // let WP know we’re using HTML5 & a custom title tag

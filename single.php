@@ -11,6 +11,13 @@
         </div>
       <?php endif; ?>
       <div><?php the_content(); ?></div>
+
+      <?php if ( comments_open() || get_comments_number() ) : ?>
+        <section class="comments-area">
+          <?php comments_template(); ?>
+        </section>
+      <?php endif; ?>
+
     </article>
   <?php endwhile; endif; ?>
   <p><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="btn">Back to Blog</a></p>

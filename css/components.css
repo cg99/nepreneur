@@ -68,3 +68,45 @@
 .pagination a:hover {
   background: var(--np-primary-light);
 }
+
+/* Comments */
+.comments-area {
+  margin-top: 3rem;
+}
+
+.comments-area .comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-area .comment-list li {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e7ef;
+  padding-bottom: 1rem;
+}
+
+.comments-area .comment-author .avatar {
+  border-radius: 50%;
+}
+
+.comment-form textarea,
+.comment-form input[type="text"],
+.comment-form input[type="email"] {
+  width: 100%;
+  padding: .6rem .8rem;
+  border: 1px solid #d1d5db;
+  border-radius: .5rem;
+}
+
+.comment-form input[type="submit"] {
+  background: var(--np-primary);
+  color: #fff;
+  border: none;
+  padding: .7rem 2rem;
+  border-radius: var(--np-radius);
+  cursor: pointer;
+}
+
+.comment-form input[type="submit"]:hover {
+  background: var(--np-primary-light);
+}

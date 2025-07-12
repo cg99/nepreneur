@@ -43,12 +43,6 @@
   <a href="<?php echo esc_url( site_url('/join') ); ?>" class="btn">Sign Up Now</a>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email <a href="mailto:hello@nepreneur.com">hello@nepreneur.com</a> •
-     <a href="https://twitter.com/nepreneur" target="_blank" rel="noopener">Twitter</a></p>
-</section>
-
 <section id="recent-posts">
   <h2>Recent Posts</h2>
   <div class="blog-list">

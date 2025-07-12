@@ -35,6 +35,8 @@ if ( isset( $_POST['nep_reg_nonce'] ) && wp_verify_nonce( $_POST['nep_reg_nonce'
 
 get_header(); ?>
 
+<section>
+
 <main id="nep-signup" class="signup-page">
 
 <?php
@@ -82,5 +84,7 @@ if ( is_user_logged_in() ) {
 ?>
 
 </main>
+</section>
+
 
 <?php get_footer(); ?>

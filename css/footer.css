@@ -90,7 +90,7 @@
 .np-col h5 {
   margin: .2rem 0 .8rem;
   font-size: .95rem;
-  color: --var(--np-primary);
+  color: var(--np-primary);
 }
 .np-col ul {
   margin: 0;

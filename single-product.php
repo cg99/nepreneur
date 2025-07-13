@@ -41,7 +41,23 @@ if ( have_posts() ) :
 				<?php if ( $url ) : ?>
 					<li><a class="chip website" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener">Visit site ↗</a></li>
 				<?php endif; ?>
-				<li class="chip votes"><?php echo $votes; ?></li>
+				<li class="chip votes">
+				  <?php
+				    $user_id = get_current_user_id();
+				    $voters = get_post_meta(get_the_ID(), 'upvote_users', true);
+				    $voters = $voters ? (array) $voters : [];
+				    $already_voted = in_array($user_id, $voters);
+				  ?>
+				  <?php if ( is_user_logged_in() ) : ?>
+				    <button class="np-upvote-btn" data-post="<?php echo get_the_ID(); ?>"
+				      aria-label="Upvote"
+				      <?php if ($already_voted) echo 'disabled title="Already upvoted" style="cursor:not-allowed;opacity:0.5;"'; ?>
+				      style="background:none;border:none;cursor:pointer;">▲</button>
+				  <?php else : ?>
+				    <button class="np-upvote-btn" disabled title="Login to upvote" style="background:none;border:none;cursor:not-allowed;opacity:0.5;">▲</button>
+				  <?php endif; ?>
+				  <span class="np-upvote-count"><?php echo get_post_meta(get_the_ID(), 'upvotes', true) ?: '0'; ?></span>
+				</li>
 			</ul>
 		</div>
 	</header>
@@ -52,6 +68,9 @@ if ( have_posts() ) :
 	</div>
 
 </article>
+
+<!-- Comments -->
+	<?php comments_template(); ?>
 
 <?php
 	/* ----------------------------------------------------------------
@@ -81,8 +100,7 @@ if ( have_posts() ) :
 		</section>
 	<?php endif; ?>
 
-	<!-- Comments -->
-	<?php comments_template(); ?>
+	
 
     </section>
 

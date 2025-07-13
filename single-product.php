@@ -16,6 +16,8 @@ if ( have_posts() ) :
 		$sector  = ucfirst( get_field( 'product_sector' ) );
 		$votes   = do_shortcode( '[upvote]' );      // WP Upvote shortcode
 ?>
+
+<section>
 <article class="product-single">
 
 	<!-- Hero -->
@@ -45,9 +47,9 @@ if ( have_posts() ) :
 	</header>
 
 	<!-- Body copy -->
-	<section class="product-content">
+	<div class="product-content">
 		<?php the_content(); ?>
-	</section>
+	</div>
 
 </article>
 
@@ -81,6 +83,8 @@ if ( have_posts() ) :
 
 	<!-- Comments -->
 	<?php comments_template(); ?>
+
+    </section>
 
 <?php
 	endwhile;

@@ -250,7 +250,7 @@ Version: 1.2
 .chip.website{background:#f1f5f9;color:inherit;text-decoration:none}
 .chip.votes{background:#fff;color:inherit}
 
-.product-content{max-width:720px;margin:2.5rem auto;line-height:1.6;font-size:1rem}
+.product-content{margin:2.5rem auto;line-height:1.6;font-size:1rem}
 .product-content img{max-width:100%;height:auto;border-radius:8px}
 
 .related-products{padding:3rem 0;border-top:1px solid var(--np-gray-200);}

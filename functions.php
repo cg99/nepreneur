@@ -4,8 +4,17 @@
  */
 
 add_action( 'wp_enqueue_scripts', function () {
+    // theme component stylesheets
+    wp_enqueue_style( 'nep-base', get_theme_file_uri( '/css/base.css' ), [], filemtime( get_theme_file_path( '/css/base.css' ) ) );
+    wp_enqueue_style( 'nep-header', get_theme_file_uri( '/css/header.css' ), [], filemtime( get_theme_file_path( '/css/header.css' ) ) );
+    wp_enqueue_style( 'nep-components', get_theme_file_uri( '/css/components.css' ), [], filemtime( get_theme_file_path( '/css/components.css' ) ) );
+    wp_enqueue_style( 'nep-frontpage', get_theme_file_uri( '/css/frontpage.css' ), [], filemtime( get_theme_file_path( '/css/frontpage.css' ) ) );
+    wp_enqueue_style( 'nep-footer', get_theme_file_uri( '/css/footer.css' ), [], filemtime( get_theme_file_path( '/css/footer.css' ) ) );
+    wp_enqueue_style( 'nep-responsive', get_theme_file_uri( '/css/responsive.css' ), [], filemtime( get_theme_file_path( '/css/responsive.css' ) ) );
+    wp_enqueue_style( 'nep-pages', get_theme_file_uri( '/css/pages.css' ), [], filemtime( get_theme_file_path( '/css/pages.css' ) ) );
     // main stylesheet (auto-appends version for cache-busting)
     wp_enqueue_style( 'nep-style', get_stylesheet_uri(), [], filemtime( get_stylesheet_directory() . '/style.css' ) );
+    wp_enqueue_style( 'nep-product', get_theme_file_uri( '/css/product.css' ), [], filemtime( get_theme_file_path( '/css/product.css' ) ) );
 
     // smooth-scroll for anchor links
     wp_enqueue_script( 'nep-scroll', get_theme_file_uri( '/js/smooth-scroll.js' ), [], '1.0', true );

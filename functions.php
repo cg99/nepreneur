@@ -129,3 +129,35 @@ function np_upvote() {
     wp_send_json_error();
 }
 
+/*----------------------------------------------------
+ * Breadcrumbs Function
+ *---------------------------------------------------*/
+function nep_breadcrumbs() {
+    echo '<nav class="np-breadcrumbs" aria-label="Breadcrumb">';
+    echo '<ul>';
+    // echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+    if (is_singular('product')) {
+        echo '<li><a href="' . esc_url(get_post_type_archive_link('product')) . '">Products</a></li>';
+        echo '<li>' . get_the_title() . '</li>';
+    } elseif (is_post_type_archive('product')) {
+        echo '<li>Products</li>';
+    } elseif (is_singular('post')) {
+        echo '<li><a href="' . esc_url(get_post_type_archive_link('post')) . '">Blog</a></li>';
+        echo '<li>' . get_the_title() . '</li>';
+    } elseif (is_home()) {
+        echo '<li>Blog</li>';
+    } elseif (is_page()) {
+        $ancestors = array_reverse(get_post_ancestors(get_the_ID()));
+        foreach ($ancestors as $ancestor) {
+            echo '<li><a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
+        }
+        echo '<li>' . get_the_title() . '</li>';
+    } elseif (is_search()) {
+        echo '<li>Search results</li>';
+    } elseif (is_404()) {
+        echo '<li>Not Found</li>';
+    }
+    echo '</ul>';
+    echo '</nav>';
+}
+

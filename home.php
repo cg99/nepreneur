@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <section id="blog">
+  <?php nep_breadcrumbs(); ?>
   <h2>Latest Posts</h2>
   <div class="blog-list">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

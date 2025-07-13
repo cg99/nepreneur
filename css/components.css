@@ -110,3 +110,32 @@
 .comment-form input[type="submit"]:hover {
   background: var(--np-primary-light);
 }
+
+/* Breadcrumbs */
+.np-breadcrumbs {
+  margin: 1.5rem 0 2rem 0;
+  font-size: .98rem;
+}
+.np-breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: .7rem;
+  flex-wrap: wrap;
+}
+.np-breadcrumbs li {
+  color: var(--np-gray);
+}
+.np-breadcrumbs li:not(:last-child)::after {
+  content: "›";
+  margin: 0 .5rem;
+  color: #bbb;
+}
+.np-breadcrumbs a {
+  color: var(--np-primary);
+  text-decoration: none;
+}
+.np-breadcrumbs a:hover {
+  text-decoration: underline;
+}

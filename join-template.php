@@ -36,7 +36,7 @@ if ( isset( $_POST['nep_reg_nonce'] ) && wp_verify_nonce( $_POST['nep_reg_nonce'
 get_header(); ?>
 
 <section>
-
+<?php nep_breadcrumbs(); ?>
 <main id="nep-signup" class="signup-page">
 
 <?php

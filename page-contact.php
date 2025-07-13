@@ -4,6 +4,7 @@ get_header();
 ?>
 
 <section id="contact-page">
+  <?php nep_breadcrumbs(); ?>
   <h1>Contact</h1>
   <p>Email <a href="mailto:hello@nepreneur.com">hello@nepreneur.com</a>
     &bull;

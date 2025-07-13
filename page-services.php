@@ -6,6 +6,7 @@ get_header();
 ?>
 
 <section id="services-page">
+  <?php nep_breadcrumbs(); ?>
   <h1>Our Services</h1>
 
   <div class="services-grid">

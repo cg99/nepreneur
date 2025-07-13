@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/product.css">
 
 <section id="products">
+  <?php // nep_breadcrumbs(); ?>
   <h2 style="text-align:center;">Products</h2>
   <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

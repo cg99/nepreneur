@@ -18,7 +18,8 @@ if ( have_posts() ) :
 ?>
 
 <section>
-<article class="product-single">
+	<?php nep_breadcrumbs(); ?>
+	<article class="product-single">
 
 	<!-- Hero -->
 	<header class="product-hero">

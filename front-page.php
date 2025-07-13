@@ -103,6 +103,4 @@
   </div>
 </section>
 
-<section></section>
-
 <?php get_footer(); ?>

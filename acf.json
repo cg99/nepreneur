@@ -1,0 +1,97 @@
+{
+  "key": "group_product_details",
+  "title": "Product Details",
+  "fields": [
+    {
+      "key": "field_product_logo",
+      "label": "Product Logo",
+      "name": "product_logo",
+      "type": "image",
+      "instructions": "Upload a 1×1 logo (120×120 px recommended).",
+      "required": 1,
+      "return_format": "array",
+      "preview_size": "thumbnail",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "jpg,jpeg,png,svg"
+    },
+    {
+      "key": "field_product_tagline",
+      "label": "Tagline",
+      "name": "product_tagline",
+      "type": "text",
+      "instructions": "One‑line elevator pitch (max 80 characters).",
+      "required": 1,
+      "default_value": "",
+      "maxlength": 80
+    },
+    {
+      "key": "field_product_website",
+      "label": "Website / App Store URL",
+      "name": "product_website",
+      "type": "url",
+      "instructions": "",
+      "required": 1
+    },
+    {
+      "key": "field_product_stage",
+      "label": "Stage",
+      "name": "product_stage",
+      "type": "radio",
+      "instructions": "",
+      "required": 1,
+      "choices": {
+        "upcoming": "Upcoming",
+        "live": "Live"
+      },
+      "other_choice": 0,
+      "default_value": "upcoming",
+      "layout": "horizontal",
+      "return_format": "value"
+    },
+    {
+      "key": "field_product_sector",
+      "label": "Sector",
+      "name": "product_sector",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "fintech": "Fin‑tech",
+        "agritech": "Agri‑tech",
+        "greentech": "Green / Energy Tech",
+        "healthtech": "Health‑tech",
+        "edtech": "Ed‑tech",
+        "ecommerce": "E‑commerce",
+        "mobility": "Mobility",
+        "other": "Other"
+      },
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 1,
+      "return_format": "value"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "product"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

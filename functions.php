@@ -17,6 +17,7 @@ add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_style( 'nep-pages', get_theme_file_uri( '/css/pages.css' ), [], filemtime( get_theme_file_path( '/css/pages.css' ) ) );
     wp_enqueue_style( 'nep-style', get_stylesheet_uri(), [], filemtime( get_stylesheet_directory() . '/style.css' ) );
     wp_enqueue_style( 'nep-product', get_theme_file_uri( '/css/product.css' ), [], filemtime( get_theme_file_path( '/css/product.css' ) ) );
+    wp_enqueue_style( 'nep-bbpress', get_theme_file_uri( '/css/bbpress.css' ), [], filemtime( get_theme_file_path( '/css/bbpress.css' ) ) );
 
     // smooth-scroll for anchor links
     wp_enqueue_script( 'nep-scroll', get_theme_file_uri( '/js/smooth-scroll.js' ), [], '1.0', true );
@@ -54,14 +55,9 @@ function nep_create_default_pages() {
             'template' => 'page-contact.php',
         ],
         [
-            'slug'    => 'services',
-            'title'   => 'Services',
-            'template' => 'page-services.php',
-        ],
-        [
-            'slug'    => 'get-started',
-            'title'   => 'Get Started',
-            'template' => 'page-get-started.php',
+            'slug'    => 'advertise',
+            'title'   => 'Advertise',
+            'template' => 'page-advertise.php',
         ],
     ];
 

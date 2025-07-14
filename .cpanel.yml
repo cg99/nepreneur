@@ -1,11 +1,6 @@
+---
 deployment:
   tasks:
-    # WordPress path on Namecheap
-    - export THEME_PATH=/home/nepraptk/public_html/wp-content/themes/nepreneur
-
-    # Copy everything except .git directory
-    - /bin/rsync -avz --delete --exclude='.git/' --exclude='.gitignore' \
-        $REPO_ROOT/ $THEME_PATH/
-
-    # Optional: touch a file so caching plugins see a change‑time bump
-    - /usr/bin/touch $THEME_PATH/.deployed_$(date +%s)
+    - export THEME=/home/nepraptk/public_html/wp-content/themes/nepreneur
+    - /usr/bin/rsync -avz --delete --exclude='.git/' --exclude='.gitignore' \
+        $REPO_ROOT/ $THEME/

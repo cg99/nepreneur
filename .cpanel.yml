@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export THEME=/home/nepraptk/public_html/wp-content/themes/nepreneur
-    - /usr/bin/rsync -avz --delete --exclude='.git/' --exclude='.gitignore' \
-        $REPO_ROOT/ $THEME/
+    - /usr/bin/rsync -avz --delete --exclude='.git/' $REPO_ROOT $THEME

@@ -1,5 +1,16 @@
 ---
 deployment:
   tasks:
-    - export THEME=/home/nepraptk/public_html/wp-content/themes/nepreneur
-    - /usr/bin/rsync -avz --delete --exclude='.git/' $REPO_ROOT $THEME
+    - 'set -ex'
+
+    # Ensure destination exists
+    - '/bin/mkdir -p /home/nepraptk/public_html/wp-content/themes/nepreneur'
+
+    # Copy the repo *contents* → theme dir (note the trailing slashes)
+    # If your server has rsync at /bin/rsync, change the path accordingly.
+    - '/usr/bin/rsync -av --delete --exclude=".git/" --exclude=".github/" --exclude=".cpanel*" \
+       /home/nepraptk/repositories/nepreneur/ \
+       /home/nepraptk/public_html/wp-content/themes/nepreneur/'
+
+    # Optional: stamp a deploy time file
+    - '/usr/bin/touch /home/nepraptk/public_html/wp-content/themes/nepreneur/.deployed_$(date +%s)'

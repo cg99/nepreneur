@@ -46,7 +46,7 @@ a { text-decoration: none; }
 
 /* 3.0 Layout -------------------------------------------------*/
 section {
-  padding: var(--np-space-section) 1.5rem;
-  max-width: 1200px;
+  padding: var(--np-space-section) 10rem;
+  /* max-width: 1200px; */
   margin-inline: auto;
 }

@@ -28,7 +28,7 @@
   min-height: calc(100svh - 110px); /* Full viewport height minus header */
   background: none;
   gap: 3rem;
-  padding: calc(var(--np-space-section) / 2) 2rem;
+  padding: calc(var(--np-space-section) / 2) 5rem;
 }
 
 .hero-content {
@@ -73,6 +73,10 @@
   border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
   object-fit: cover;
+}
+
+#about {
+  background-color: aliceblue;
 }
 
 /* Responsive: stack hero on mobile */

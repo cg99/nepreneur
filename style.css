@@ -4,3 +4,27 @@ Theme URI: https://nepreneur.com
 Author: Nepreneur Team
 Version: 1.2
 */
+
+
+
+/* Base for all sections so art layers sit behind content */
+section#hero{position:relative; overflow:hidden;}
+section#hero > *{position:relative; z-index:1;}
+section#hero::before{content:""; position:absolute; inset:0; z-index:0;}
+
+
+
+/* =================================================
+   hero — soft dots + orange/blue organic “blobs”
+   ================================================= */
+#hero{
+  background:
+    radial-gradient(800px 400px at 85% -10%, rgba(14,177,227,.20), transparent 60%),
+    radial-gradient(600px 360px at -10% 95%, rgba(255,106,61,.16), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+#hero::before{
+  background:
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Ccircle cx='1' cy='1' r='1' fill='%230EB1E3' fill-opacity='.08'/%3E%3C/svg%3E") 0 0/8px 8px repeat;
+  opacity:.9;
+}

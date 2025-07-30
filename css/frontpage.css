@@ -5,12 +5,7 @@
   grid-template-columns: repeat(auto-fit,minmax(min(280px,100%),1fr));
 }
 
-#cta {
-  background: #fff;
-  border-radius: var(--np-radius);
-  box-shadow: var(--np-shadow);
-  text-align: center;
-}
+
 #get-started {
   background: #fff;
   border-radius: var(--np-radius);
@@ -27,8 +22,12 @@
   justify-content: center;
   min-height: calc(100svh - 110px); /* Full viewport height minus header */
   background: none;
-  gap: 3rem;
-  padding: calc(var(--np-space-section) / 2) 5rem;
+  /* gap: 3rem; */
+  /* padding: calc(var(--np-space-section) / 2) 8rem; */
+}
+
+.hero-title {
+  margin-top: 0;
 }
 
 .hero-content {
@@ -53,10 +52,29 @@
 }
 
 .hero-content .btn {
-  align-self: flex-start;
-  font-size: 1.1rem;
-  padding: 1rem 2.5rem;
+  display: inline-flex;
+  align-items: center;      /* Vertically center icon and text */
+  justify-content: center;  /* Horizontally center contents */
+  gap: 8px;                 /* Optional: space between icon and text */
+  width: fit-content;
+  background: var(--np-primary);
+  color: #fff;
+  box-shadow: var(--np-shadow);
+  border-radius: var(--np-radius);
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: background 0.2s, color 0.2s;
 }
+
+.hero-content .btn:hover {
+  background: #fff;
+  color:  var(--np-primary);
+}
+
+.hero-content .btn:hover > svg {
+  fill: var(--np-primary);
+}
+
 
 .hero-image {
   flex: 1 1 0;

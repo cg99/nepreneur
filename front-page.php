@@ -8,9 +8,12 @@
 </span>
 
 
-    <h1>Igniting Nepal's <br>Entrepreneurial Spirit</h1>
+    <h1 class="hero-title">Igniting Nepal's <br><span style="color: #FF6A3D">Entrepreneurial</span>
+    Spirit</h1>
     <p>Connect with founders, mentors & investors driving innovation across Nepal.</p>
-    <a href="#cta" class="btn">Join the Community</a>
+    <a href="#cta" class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#FFFFFF"><path d="m160-419 101-101-101-101L59-520l101 101Zm540-21 100-160 100 160H700Zm-220-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-160q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640Zm0 40ZM0-240v-63q0-44 44.5-70.5T160-400q13 0 25 .5t23 2.5q-14 20-21 43t-7 49v65H0Zm240 0v-65q0-65 66.5-105T480-450q108 0 174 40t66 105v65H240Zm560-160q72 0 116 26.5t44 70.5v63H780v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5Zm-320 30q-57 0-102 15t-53 35h311q-9-20-53.5-35T480-370Zm0 50Z"/></svg>
+   Join the Community </a>
   </div>
   <div class="hero-image">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/hero.png" alt="Kathmandu skyline with Himalayan backdrop">
@@ -20,16 +23,16 @@
 <section id="about">
   <h2>
     <!-- Lightbulb SVG Icon -->
-    <span class="icon-about" aria-hidden="true">
+    <!-- <span class="icon-about" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF6A3D"><path d="M400-240q-33 0-56.5-23.5T320-320v-50q-57-39-88.5-100T200-600q0-117 81.5-198.5T480-880q117 0 198.5 81.5T760-600q0 69-31.5 129.5T640-370v50q0 33-23.5 56.5T560-240H400Zm0-80h160v-92l34-24q41-28 63.5-71.5T680-600q0-83-58.5-141.5T480-800q-83 0-141.5 58.5T280-600q0 49 22.5 92.5T366-436l34 24v92Zm0 240q-17 0-28.5-11.5T360-120v-40h240v40q0 17-11.5 28.5T560-80H400Zm80-520Z"/></svg>
-          </span>
+          </span> -->
     About Nepreneur
   </h2>
   <p>Launched in 2025, Nepreneur is a catalyst for <strong>knowledge-sharing, funding, and networking</strong> among Nepal-based startups and SMEs. We believe every ambitious founder deserves world-class resources at home.</p>
 </section>
 
 <section id="services">
-  <h2>What We Offer</h2>
+  <h2>Empower Your Journey with Nepreneur</h2>
 
   <div class="services-grid">
     <article class="card">
@@ -63,9 +66,9 @@
 <section id="cta">
   <h2>
     <!-- Star SVG Icon -->
-    <span class="icon-cta" aria-hidden="true">
+    <!-- <span class="icon-cta" aria-hidden="true">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2" stroke="#E4572E" stroke-width="2" stroke-linejoin="round"/></svg>
-    </span>
+    </span> -->
     Ready to level-up?
   </h2>
   <p>Become a member and unlock exclusive workshops, events & perks.</p>
@@ -88,16 +91,19 @@
       if ( $recent_posts->have_posts() ) :
         while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
     ?>
-      <article class="card">
+      <article class="card blog-post">
         <?php if ( has_post_thumbnail() ) : ?>
-          <a href="<?php the_permalink(); ?>">
+          <a href="<?php the_permalink(); ?>" class="post-thumbnail">
             <?php the_post_thumbnail('medium'); ?>
           </a>
         <?php endif; ?>
-        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <small><?php the_time('F j, Y'); ?></small>
-        <p><?php the_excerpt(); ?></p>
-        <a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+        <div class="blog-content">
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <small><?php the_time('F j, Y'); ?></small>
+          <p><?php the_excerpt(); ?></p>
+          <a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+        </div>
+
       </article>
     <?php endwhile; endif; wp_reset_postdata(); ?>
   </div>

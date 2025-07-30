@@ -15,7 +15,7 @@
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="<?php bloginfo('name'); ?> Logo" style="height:100px;">
         </a>
-        Nepreneur
+       <h3>Nepreneur</h3>
     </div>
 
      <nav class="navbar">

@@ -28,25 +28,27 @@
 				<h5>Platform</h5>
 				<ul>
                                         <li><a href="<?php echo esc_url( site_url( '/about' ) ); ?>">Why Nepreneur?</a></li>
-                                        <li><a href="<?php echo esc_url( site_url( '/pricing' ) ); ?>">Pricing</a></li>
                                         <li><a href="<?php echo esc_url( site_url( '/faq' ) ); ?>">FAQ</a></li>
+                                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
+
 				</ul>
 			</div>
 			<div class="np-col">
 				<h5>Features</h5>
 				<ul>
-                                        <li><a href="<?php echo esc_url( site_url( '/payments' ) ); ?>">Payments</a></li>
-                                        <li><a href="<?php echo esc_url( site_url( '/api' ) ); ?>">API</a></li>
-                                        <li><a href="<?php echo esc_url( site_url( '/ecommerce' ) ); ?>">E-commerce</a></li>
-                                        <li><a href="<?php echo esc_url( site_url( '/business' ) ); ?>">Business</a></li>
+                                        <li><a href="<?php echo esc_url( site_url( '/forums' ) ); ?>">Forums</a></li>
+                                        <li><a href="<?php echo esc_url( site_url( '/advertise' ) ); ?>">Advertise</a></li>
+                                        <li><a href="<?php echo esc_url( site_url( '/product' ) ); ?>">Products</a></li>
+
+
 				</ul>
 			</div>
 			<div class="np-col">
 				<h5>Company</h5>
 				<ul>
-                                        <li><a href="<?php echo esc_url( site_url( '/about' ) ); ?>">About Us</a></li>
-                                        <li><a href="<?php echo esc_url( site_url( '/career' ) ); ?>">Career</a></li>
-                                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
+										<li><a href="<?php echo esc_url( site_url( '/contact' ) ); ?>">Contact Us</a></li>
+										<li><a href="<?php echo esc_url( site_url( '/privacy-policy' ) ); ?>">Privacy Policy</a></li>
+										<li><a href="<?php echo esc_url( site_url( '/terms-of-service' ) ); ?>">Terms of Service</a></li>
 				</ul>
 			</div>
 		</div>

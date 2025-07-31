@@ -107,6 +107,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
 require_once get_theme_file_path( '/inc/cpt-product.php' );
 require_once get_theme_file_path( '/inc/roles.php' );
 require_once get_theme_file_path( '/inc/rewrite-join.php' );
+require_once get_theme_file_path( '/inc/rewrite-login.php' );
 
 add_action('wp_ajax_np_upvote', 'np_upvote');
 add_action('wp_ajax_nopriv_np_upvote', 'np_upvote');

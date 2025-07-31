@@ -26,6 +26,7 @@
                 <li><a href="<?php echo esc_url( site_url('/contact') ); ?>">Contact</a></li>
                 <li><a href="<?php echo esc_url( get_post_type_archive_link( 'product' ) ); ?>">Products</a></li>
                 <li><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blog</a></li>
+                <li><a href="<?php echo esc_url( site_url( '/login' ) ); ?>">Login</a></li>
             </ul>
         </nav>
 

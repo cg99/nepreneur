@@ -1,7 +1,7 @@
 /* Header Navigation */
 .navbar ul {
   display: flex;
-  gap: 2.25rem;
+  /* gap: 2.25rem; */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@
   backdrop-filter: blur(12px) saturate(160%);
   transition: box-shadow 0.3s;
   padding: 0 2.5rem;
-  min-height: 110px;
+  /* min-height: 110px; */
 }
 
 .site-header .logo {
@@ -56,7 +56,7 @@
 .site-header .navbar ul {
   display: flex;
   align-items: center;           /* Vertically center nav links */
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
   margin: 0;
   padding: 0;
   list-style: none;

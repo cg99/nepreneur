@@ -55,18 +55,11 @@
 
         <!-- Social -->
         <div class="np-footer__social">
-            <a href="https://facebook.com/nepreneur" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/groups/1358308645244652" target="_blank" rel="noopener" aria-label="Facebook">
                 <!-- Facebook SVG -->
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.127 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.127 22 17 22 12z" fill="#1877F3"/>
                     <path d="M15.357 14.89l.443-2.89h-2.773v-1.875c0-.791.39-1.562 1.632-1.562h1.26v-2.46s-1.144-.195-2.238-.195c-2.285 0-3.777 1.384-3.777 3.89v2.016h-2.54v2.89h2.54v6.987a10.06 10.06 0 003.124 0v-6.987h2.33z" fill="#fff"/>
-                </svg>
-            </a>
-            <a href="https://linkedin.com/company/nepreneur" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <!-- LinkedIn SVG -->
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5z" fill="#0077B5"/>
-                    <path d="M7.119 19H4.56V9h2.559v10zM5.84 7.75a1.48 1.48 0 110-2.96 1.48 1.48 0 010 2.96zM19 19h-2.56v-4.8c0-1.143-.021-2.613-1.594-2.613-1.594 0-1.838 1.246-1.838 2.532V19H10.45V9h2.46v1.364h.035c.343-.65 1.184-1.338 2.438-1.338 2.607 0 3.088 1.715 3.088 3.946V19z" fill="#fff"/>
                 </svg>
             </a>
             <a href="https://twitter.com/nepreneur" target="_blank" rel="noopener" aria-label="Twitter">

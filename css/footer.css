@@ -2,7 +2,7 @@
 .np-footer {
   color: var(--np-primary);
   background: #c3e5ff2e;
-  font-family: Inter, system-ui, sans-serif;
+  /* font-family: Inter, system-ui, sans-serif; */
   margin-top: 7rem;
 }
 

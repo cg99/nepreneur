@@ -67,6 +67,10 @@
   grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
 }
 
+.blog-list .card img {
+  max-width: 100%;
+}
+
 /* Pagination */
 .pagination {
   margin-top: 2rem;
